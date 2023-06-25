@@ -3,7 +3,7 @@ import "./index.css";
 
 import Logo from "./logo";
 import Form from "./form.js";
-import PackingList from "./FackingList.js";
+import PackingList from "./PackingList.js";
 import Stats from "./Footer.js";
 
 function App() {
