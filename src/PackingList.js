@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PackingItem from "./PackingItem";
 
 export default function PackingList({
   items,
@@ -54,25 +55,5 @@ export default function PackingList({
         <button onClick={onClearList}>Clear List</button>
       </div>
     </main>
-  );
-}
-
-function PackingItem({ item, onDeleteItem, onPackItem }) {
-  return (
-    <li>
-      <input
-        type="checkbox"
-        checked={item.packed}
-        onChange={() => onPackItem(item.id)}
-      />
-
-      <span
-        style={item.packed ? { textDecoration: "line-through" } : {}}
-      >
-        {`${item.quantity} ${item.description}`}
-      </span>
-
-      <button onClick={() => onDeleteItem(item.id)}>❌</button>
-    </li>
   );
 }
